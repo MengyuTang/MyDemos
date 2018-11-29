@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="titleText" format="string"/>
+    <attr name="titleTextColor" format="color"/>
+    <attr name="titleTextSize" format="dimension" />
+    <attr name="image" format="reference"/>
+    <attr name="imageScaleType">
+        <enum name="fillXY" value="0"/>
+        <enum name="center" value="1"/>
+    </attr>
+
+    <declare-styleable name="CustomTitleView">
+        <attr name="titleText"/>
+        <attr name="titleTextColor"/>
+        <attr name="titleTextSize"/>
+    </declare-styleable>
+    
+    <declare-styleable name="CustomImageView">
+        <attr name="titleText"/>
+        <attr name="titleTextColor"/>
+        <attr name="titleTextSize"/>
+        <attr name="image"/>
+        <attr name="imageScaleType"/>
+    </declare-styleable>
+
+    <attr name="firstColor" format="color"/>
+    <attr name="secondColor" format="color"/>
+    <attr name="speed" format="integer"/>
+    <attr name="circleWidth" format="dimension"/>
+    <declare-styleable name="CustomerProgressBar">
+        <attr name="firstColor"/>
+        <attr name="secondColor"/>
+        <attr name="speed"/>
+        <attr name="circleWidth"/>
+    </declare-styleable>
+
+    <attr name="backgroundColor" format="color"/>
+    <attr name="content" format="string"/>
+    <attr name="contentTextSize" format="dimension"/>
+    <declare-styleable name="PopView">
+        <attr name="backgroundColor"/>
+        <attr name="content"/>
+        <attr name="contentTextSize"/>
+    </declare-styleable>
+
+    <attr name="waveCount" format="integer"/>
+    <attr name="waveWidth" format="integer" />
+    <attr name="mode">
+        <enum name = "circle" value = "-1"/>
+        <enum name="triangle" value="-2"/>
+    </attr>
+    <declare-styleable name="WaveView">
+        <attr name="waveCount"/>
+        <attr name="waveWidth"/>
+        <attr name="android:color"/>
+        <attr name="mode"/>
+        <attr name="content"/>
+        <attr name="contentTextSize"/>
+        <attr name="titleTextColor"/>
+    </declare-styleable>
+    
+    <declare-styleable name="StopWatchView">
+        <attr name="secondsPointerLength" format="float"/>
+        <attr name="minutePointerLength" format="float"/>
+        <attr name="secondScaleLength" format="float"/>
+        <attr name="minuteScaleLength" format="float"/>
+        <attr name="childSecondScaleLength" format="float"/>
+        <attr name="pointerColor" format="color"/>
+        <attr name="android:background"/>
+    </declare-styleable>
+
+    <declare-styleable name="CheckView">
+        <attr name="outer_circle_color" format="color"/>
+        <attr name="inner_circle_color" format="color"/>
+        <attr name="outer_radius" format="float"/>
+        <attr name="is_checked" format="boolean"/>
+    </declare-styleable>
+</resources>

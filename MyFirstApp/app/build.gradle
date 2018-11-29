@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.fpm0322.myfirstapp"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//    packagingOptions {
+//        exclude 'META-INF/DEPENDENCIES'
+//        exclude 'META-INF/NOTICE'
+//        exclude 'META-INF/NOTICE.txt'
+//        exclude 'META-INF/LICENSE'
+//        exclude 'META-INF/LICENSE.txt'
+//    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    compile 'org.jetbrains.anko:anko-sdk15:0.8.2'
+    // sdk19, sdk21, sdk23 are also available
+    compile 'org.jetbrains.anko:anko-support-v4:0.8.2'
+    // In case you need support-v4 bindings
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.8.2'
+    // For appcompat-v7 bindings
+    //读取excel数据
+    implementation files('libs/poi-3.12-android-a.jar')
+    implementation files('libs/poi-ooxml-schemas-3.12-20150511-a.jar')
+    implementation 'com.android.support:multidex:1.0.3'
+}
+repositories {
+    mavenCentral()
+}
